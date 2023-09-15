@@ -18,8 +18,14 @@ namespace Library_Sematech
         #region Propreties
         public string SubscriberCode
         {
-            get { return _subscribercode; }
-            set { _subscribercode = value; }
+            get 
+            { 
+                return _subscribercode;
+            }
+            set 
+            { 
+                _subscribercode = value;
+            }
         }
 
 

@@ -64,6 +64,7 @@ namespace Library_Sematech
             txtSubsCode.Name = "txtSubsCode";
             txtSubsCode.Size = new Size(125, 27);
             txtSubsCode.TabIndex = 1;
+            txtSubsCode.KeyPress += txtSubsCode_KeyPress;
             // 
             // lblSubsCode
             // 
@@ -238,6 +239,20 @@ namespace Library_Sematech
         private void btnExitSubs_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtSubsCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            bool IsDigit;
+            IsDigit=General.ValidateNumericTextBox(ch);
+
+            if (IsDigit==false) 
+            {
+                MessageBox.Show("Only numeric value is allowed !");
+               e.Handled=true;
+            }
+
         }
     }
 }
