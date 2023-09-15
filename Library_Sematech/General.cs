@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace Library_Sematech
 {
+
+    /// <summary>
+    /// This Class includes basic members
+    /// Author : Ashkan Paydari
+    /// Tel : 09129734590
+    /// Email : paydari.ashkann@gmail.com
+    /// Version 1.0
+    /// </summary>
+
     public static class General
     {
 

@@ -6,6 +6,14 @@ using System.Threading.Tasks;
 
 namespace Library_Sematech
 {
+    /// <summary>
+	/// This Class is used to enter subscribers information
+	/// Author : Ashkan Paydari
+	/// Tel : 09129734590
+	/// Email : paydari.ashkann@gmail.com
+	/// Version 1.0
+	/// </summary>
+
     public class Subscriber
     {
         #region Fields
@@ -16,6 +24,10 @@ namespace Library_Sematech
         #endregion
 
         #region Propreties
+
+        /// <summary>
+        /// Validations :  More than 5 digits - Only numeric values
+        /// </summary>
         public string SubscriberCode
         {
             get 
@@ -23,8 +35,16 @@ namespace Library_Sematech
                 return _subscribercode;
             }
             set 
-            { 
-                _subscribercode = value;
+            {
+                if (value.Length < 5)
+                {
+                    throw new ArgumentException("Subscriber code can not be less than 5 digits");
+                    
+                }
+                else
+                {
+                   _subscribercode = value;
+                }
             }
         }
 

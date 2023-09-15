@@ -23,18 +23,26 @@ namespace Library_Sematech
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Book book = new Book(txtBookCode.Text, txtBookName.Text, txtBookAuthor.Text, txtBookDesc.Text, chkIfExists.Checked);
-            books.Add(book);
+            try
+            {
+                Book book = new Book(txtBookCode.Text, txtBookName.Text, txtBookAuthor.Text, txtBookDesc.Text, chkIfExists.Checked);
+                books.Add(book);
 
 
-            MessageBox.Show("One book has been added.");
+                MessageBox.Show("One book has been added.");
 
-            txtBookCode.Text = string.Empty;
-            txtBookName.Text = string.Empty;
-            txtBookAuthor.Text = string.Empty;
-            txtBookDesc.Text = string.Empty;
+                txtBookCode.Text = string.Empty;
+                txtBookName.Text = string.Empty;
+                txtBookAuthor.Text = string.Empty;
+                txtBookDesc.Text = string.Empty;
 
-            txtBookCode.Focus();
+                txtBookCode.Focus();
+            }
+            catch (ArgumentException ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
 
 
         }

@@ -6,6 +6,15 @@ using System.Threading.Tasks;
 
 namespace Library_Sematech
 {
+	/// <summary>
+	/// This Class is used to enter books information
+	/// Author : Ashkan Paydari
+	/// Tel : 09129734590
+	/// Email : paydari.ashkann@gmail.com
+	/// Version 1.0
+	/// </summary>
+
+
     public class Book
     {
         #region Fields
@@ -18,10 +27,28 @@ namespace Library_Sematech
 
         #region Properties
 
+        /// <summary>
+        /// Validations :  More than 5 digits - Only numeric values
+        /// </summary>
+
         public string BookCode
 		{
-			get { return _bookcode; }
-			set { _bookcode = value; }
+			get 
+			{ 
+				return _bookcode; 
+			}
+			set 
+			{
+                if (value.Length < 5)
+                {
+                    throw new ArgumentException("Book code can not be less than 5 digits");
+
+                }
+                else
+                {
+                    _bookcode = value;
+                }
+            }
 		}
 
 		

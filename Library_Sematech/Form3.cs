@@ -202,17 +202,30 @@ namespace Library_Sematech
 
         private void btnSaveSubs_Click(object sender, EventArgs e)
         {
-            Subscriber subscriber = new Subscriber(txtSubsCode.Text, txtSubsFirstName.Text, txtSubsLastName.Text, txtSubsPhoneNo.Text);
-            Subscribers.Add(subscriber);
 
-            MessageBox.Show("One subscriber has been added.");
+            try
+            {
+                Subscriber subscriber = new Subscriber(txtSubsCode.Text, txtSubsFirstName.Text, txtSubsLastName.Text, txtSubsPhoneNo.Text);
+                Subscribers.Add(subscriber);
 
-            txtSubsCode.Text = string.Empty;
-            txtSubsFirstName.Text = string.Empty;
-            txtSubsLastName.Text = string.Empty;
-            txtSubsPhoneNo.Text = string.Empty;
+                MessageBox.Show("One subscriber has been added.");
 
-            txtSubsCode.Focus();
+                txtSubsCode.Text = string.Empty;
+                txtSubsFirstName.Text = string.Empty;
+                txtSubsLastName.Text = string.Empty;
+                txtSubsPhoneNo.Text = string.Empty;
+
+                txtSubsCode.Focus();
+            }
+            catch (ArgumentException ex )
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+          
+
+       
 
 
         }

@@ -13,6 +13,8 @@ namespace Library_Sematech
             frmNewBook frmNewBook = new frmNewBook();
             frmNewBook.ShowDialog();
 
+   
+
         }
 
         private void btnAddSubscriber_Click(object sender, EventArgs e)
