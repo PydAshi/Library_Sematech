@@ -9,7 +9,7 @@ namespace Library_Sematech
     public class Book
     {
         #region Fields
-        private long _bookcode;
+        private string _bookcode;
         private string _bookname;
         private string _bookauthor;
         private string _bookdesc;
@@ -18,7 +18,7 @@ namespace Library_Sematech
 
         #region Properties
 
-        public long BookCode
+        public string BookCode
 		{
 			get { return _bookcode; }
 			set { _bookcode = value; }
@@ -67,7 +67,7 @@ namespace Library_Sematech
            
         }
 
-		public Book(long bookcode, string bookname, string bookAuthor,  string bookDesc, bool ifExists)
+		public Book(string bookcode, string bookname, string bookAuthor,  string bookDesc, bool ifExists)
         {
 
 			this.BookCode = bookcode;

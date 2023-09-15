@@ -9,14 +9,14 @@ namespace Library_Sematech
     public class Subscriber
     {
         #region Fields
-        private long _subscribercode;
+        private string _subscribercode;
         private string _subscriberfirstname;
         private string _subscriberlasttname;
         private string _subscriberphoneno;
         #endregion
 
         #region Propreties
-        public long SubscriberCode
+        public string SubscriberCode
         {
             get { return _subscribercode; }
             set { _subscribercode = value; }
@@ -54,7 +54,7 @@ namespace Library_Sematech
 
 		}
 
-        public Subscriber(long subscribercode , string subscriberfirstname , string subscriberlasttname , string subscriberphoneno )
+        public Subscriber(string subscribercode , string subscriberfirstname , string subscriberlasttname , string subscriberphoneno )
         {
             this.SubscriberCode = subscribercode;
             this.SubscriberFirstName = subscriberfirstname;

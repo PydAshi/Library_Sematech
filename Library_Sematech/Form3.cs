@@ -201,7 +201,7 @@ namespace Library_Sematech
 
         private void btnSaveSubs_Click(object sender, EventArgs e)
         {
-            Subscriber subscriber = new Subscriber(int.Parse(txtSubsCode.Text), txtSubsFirstName.Text, txtSubsLastName.Text, txtSubsPhoneNo.Text);
+            Subscriber subscriber = new Subscriber(txtSubsCode.Text, txtSubsFirstName.Text, txtSubsLastName.Text, txtSubsPhoneNo.Text);
             Subscribers.Add(subscriber);
 
             MessageBox.Show("One subscriber has been added.");

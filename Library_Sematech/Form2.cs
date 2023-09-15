@@ -23,7 +23,7 @@ namespace Library_Sematech
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Book book = new Book(int.Parse(txtBookCode.Text), txtBookName.Text, txtBookAuthor.Text, txtBookDesc.Text, chkIfExists.Checked);
+            Book book = new Book(txtBookCode.Text, txtBookName.Text, txtBookAuthor.Text, txtBookDesc.Text, chkIfExists.Checked);
             books.Add(book);
 
 
