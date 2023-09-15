@@ -13,7 +13,7 @@ namespace Library_Sematech
             frmNewBook frmNewBook = new frmNewBook();
             frmNewBook.ShowDialog();
 
-   
+
 
         }
 
@@ -22,6 +22,11 @@ namespace Library_Sematech
             frmAddSubscriber frmAddSubscriber = new frmAddSubscriber();
 
             frmAddSubscriber.ShowDialog();
+        }
+
+        private void frmMainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

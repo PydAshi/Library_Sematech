@@ -12,14 +12,25 @@ namespace Library_Sematech
 {
     public partial class frmNewBook : Form
     {
+        List<Book> books;
         public frmNewBook()
         {
+
             InitializeComponent();
 
+            books = new List<Book>();
+
+            for (int i = 0; i < 5; i++)
+            {
+                books.Add(new Book { BookCode = $"Book{i + 1}", BookName = $"Name{i + 1}", BookAuthor = $"Author{i + 1}", BookDesc = $"Desc{i + 1}", IfExists=true });
+            }
+
+            dataGridView1.DataSource = books;
+            
         }
 
 
-        List<Book> books = new List<Book>();
+      
 
         private void button1_Click(object sender, EventArgs e)
         {

@@ -13,9 +13,19 @@ namespace Library_Sematech
 {
     public partial class frmAddSubscriber : Form
     {
+        List<Subscriber> subscribers;
         public frmAddSubscriber()
         {
             InitializeComponent();
+
+            subscribers = new List<Subscriber>();
+
+            for (int i = 0; i < 5; i++)
+            {
+                subscribers.Add(new Subscriber {SubscriberCode = $"Code {i + 1}" , SubscriberFirstName = $"Fname {i + 1}" , SubscriberLastName = $"Lname {i + 1}"  , SubscriberPhoneNo = $"Phone {i + 1}" });
+            }
+
+            dataGridView1.DataSource = subscribers;
         }
 
         private void InitializeComponent()

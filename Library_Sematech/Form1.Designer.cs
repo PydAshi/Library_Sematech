@@ -30,11 +30,12 @@
         {
             btnAddBook = new Button();
             btnAddSubscriber = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // btnAddBook
             // 
-            btnAddBook.Location = new Point(95, 140);
+            btnAddBook.Location = new Point(89, 220);
             btnAddBook.Name = "btnAddBook";
             btnAddBook.Size = new Size(213, 75);
             btnAddBook.TabIndex = 0;
@@ -44,7 +45,7 @@
             // 
             // btnAddSubscriber
             // 
-            btnAddSubscriber.Location = new Point(353, 140);
+            btnAddSubscriber.Location = new Point(347, 220);
             btnAddSubscriber.Name = "btnAddSubscriber";
             btnAddSubscriber.Size = new Size(213, 75);
             btnAddSubscriber.TabIndex = 1;
@@ -52,11 +53,22 @@
             btnAddSubscriber.UseVisualStyleBackColor = true;
             btnAddSubscriber.Click += btnAddSubscriber_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(89, 72);
+            label1.Name = "label1";
+            label1.Size = new Size(479, 46);
+            label1.TabIndex = 2;
+            label1.Text = "Welcome to National Library";
+            // 
             // frmMainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(682, 386);
+            Controls.Add(label1);
             Controls.Add(btnAddSubscriber);
             Controls.Add(btnAddBook);
             MaximizeBox = false;
@@ -64,13 +76,16 @@
             Name = "frmMainForm";
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Main";
+            Text = "Welcome";
+            Load += frmMainForm_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button btnAddBook;
         private Button btnAddSubscriber;
+        private Label label1;
     }
 }
