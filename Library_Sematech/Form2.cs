@@ -54,10 +54,7 @@ namespace Library_Sematech
             txtBookDesc.Text = string.Empty;
         }
 
-        private void txtBookCode_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -67,6 +64,19 @@ namespace Library_Sematech
         private void frmNewBook_Load(object sender, EventArgs e)
         {
             txtBookCode.Focus();
+        }
+
+        private void txtBookCode_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            char ch = e.KeyChar;
+            bool IsDigit;
+            IsDigit = General.ValidateNumericTextBox(ch);
+
+            if (IsDigit == false)
+            {
+                MessageBox.Show("Only numeric value is allowed !");
+                e.Handled = true;
+            }
         }
     }
 }

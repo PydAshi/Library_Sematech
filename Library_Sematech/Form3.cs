@@ -245,14 +245,16 @@ namespace Library_Sematech
         {
             char ch = e.KeyChar;
             bool IsDigit;
-            IsDigit=General.ValidateNumericTextBox(ch);
+            IsDigit = General.ValidateNumericTextBox(ch);
 
-            if (IsDigit==false) 
+            if (IsDigit == false)
             {
                 MessageBox.Show("Only numeric value is allowed !");
-               e.Handled=true;
+                e.Handled = true;
             }
 
         }
+
+       
     }
 }

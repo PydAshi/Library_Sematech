@@ -127,7 +127,7 @@
             txtBookCode.Name = "txtBookCode";
             txtBookCode.Size = new Size(125, 27);
             txtBookCode.TabIndex = 1;
-            txtBookCode.TextChanged += txtBookCode_TextChanged;
+            txtBookCode.KeyPress += txtBookCode_KeyPress;
             // 
             // txtBookName
             // 
